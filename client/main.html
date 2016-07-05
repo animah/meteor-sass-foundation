@@ -1,16 +1,19 @@
 <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>meteor-sass-foundation</title>
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
+  <h1>Welcome to Meteor + Sass + Foundation!</h1>
 
   {{> hello}}
   {{> info}}
 </body>
 
 <template name="hello">
-  <button>Click Me</button>
+  <button type="button" class="button">Click Me</button>
   <p>You've pressed the button {{counter}} times.</p>
 </template>
 
@@ -21,5 +24,10 @@
     <li><a href="http://guide.meteor.com" target="_blank">Follow the Guide</a></li>
     <li><a href="https://docs.meteor.com" target="_blank">Read the Docs</a></li>
     <li><a href="https://forums.meteor.com" target="_blank">Discussions</a></li>
+  </ul>
+  <h2>Learn Sass + Foundation!</h2>
+  <ul>
+    <li><a href="http://sass-lang.com/" target="_blank">Sass: CSS with superpowers</a></li>
+    <li><a href="http://foundation.zurb.com/" target="_blank">Foundation: The most advanced responsive front-end framework in the world</a></li>
   </ul>
 </template>
