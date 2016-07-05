@@ -5,6 +5,8 @@
     "start": "meteor run"
   },
   "dependencies": {
-    "meteor-node-stubs": "~0.2.0"
+    "foundation-sites": "^6.2.3",
+    "meteor-node-stubs": "~0.2.0",
+    "motion-ui": "^1.2.2"
   }
 }
