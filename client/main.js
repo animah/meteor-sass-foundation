@@ -2,10 +2,22 @@ import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
 
 import './main.html';
+import 'foundation-sites/dist/foundation.js';
 
 Template.hello.onCreated(function helloOnCreated() {
   // counter starts at 0
   this.counter = new ReactiveVar(0);
+});
+
+Template.hello.onRendered(() => {
+  this.helloInstance = new Foundation.Button($('#hello'));
+});
+
+Template.hello.onDestroyed(() => {
+  let hello = this.helloInstance;
+  if (hello) {
+    hello.destroy();
+  }
 });
 
 Template.hello.helpers({
