@@ -8,6 +8,17 @@ Template.hello.onCreated(function helloOnCreated() {
   this.counter = new ReactiveVar(0);
 });
 
+Template.hello.onRendered(() => {
+  this.helloInstance = new Foundation.Button($('#hello'));
+});
+
+Template.hello.onDestroyed(() => {
+  let hello = this.helloInstance;
+  if (hello) {
+    hello.destroy();
+  }
+});
+
 Template.hello.helpers({
   counter() {
     return Template.instance().counter.get();
